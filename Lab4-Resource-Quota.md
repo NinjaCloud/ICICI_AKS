@@ -58,7 +58,7 @@ spec:
     pods: "2"                      # max 2 pods in this namespace
     requests.cpu: "1"              # total CPU requests (1 CPU)
     requests.memory: "1Gi"         # total memory requests (1 Gi)
-    configmaps: "5"                # example extra resource (optional)
+
 ```
 
 Apply it:
