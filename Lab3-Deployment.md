@@ -78,10 +78,10 @@ exit
 
 ### **Step 1: Update the image version**
 
-This updates the container image to a newer version (nginx:1.11):
+This updates the container image to a newer version (nginx):
 
 ```bash
-kubectl set image deployment/nginx-dep nginx-ctr=nginx:1.11
+kubectl set image deployment/nginx-dep nginx-ctr=nginx
 ```
 
 ### **Step 2: Describe Deployment**
