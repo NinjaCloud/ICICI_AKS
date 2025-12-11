@@ -21,6 +21,22 @@ kubectl create ns ns1
 ```
 kubectl create sa -n ns1 sa1 
 ```
+Create secret to assign token to service account
+
+```
+vi sa-token.yaml
+```
+
+```
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/service-account-token
+metadata:
+  name: mysecretname
+  annotations:
+    kubernetes.io/service-account.name: sa1
+```
+
 ```
 kubectl get ns
 ```
