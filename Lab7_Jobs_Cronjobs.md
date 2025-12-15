@@ -199,17 +199,7 @@ daily-interest-calculation   0 0 * * *     False     0        <none>          1m
 
 ---
 
-### Step 4: Manually Trigger CronJob (For Demo)
-
-Since waiting until midnight is not practical, manually create a job:
-
-```bash
-kubectl create job --from=cronjob/daily-interest-calculation manual-interest-run -n banking
-```
-
----
-
-### Step 5: Verify Job and Pod
+### Step 4: Verify Job and Pod
 
 ```bash
 kubectl get jobs -n banking
@@ -218,7 +208,7 @@ kubectl get pods -n banking
 
 ---
 
-### Step 6: View Logs
+### Step 5: View Logs
 
 ```bash
 kubectl logs <pod-name> -n banking
