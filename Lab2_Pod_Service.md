@@ -154,7 +154,7 @@ kubectl describe svc httpd-svc
 #### Test Connectivity:
 1. Access the service using the LoadBalancer DNS:
    ```bash
-   curl <LoadBalancer_DNS>
+   curl <external_IP_of_svc:svc_port>
    ```
 
 ---
