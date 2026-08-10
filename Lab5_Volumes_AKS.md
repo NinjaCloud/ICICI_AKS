@@ -136,7 +136,7 @@ exit
 
 ```bash
 kubectl label pod volume-pod app=frontend
-kubectl expose pod volume-pod --type=NodePort --port=80
+kubectl expose pod volume-pod --type=LoadBalancer --port=80
 kubectl get svc
 ```
 
