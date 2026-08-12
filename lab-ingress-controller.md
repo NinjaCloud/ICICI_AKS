@@ -168,7 +168,7 @@ kubectl apply -f ingress.yaml
 
 ### **Retrieve the Ingress Controller’s External IP**
 ```bash
-kubectl get svc -n ingress-nginx
+kubectl get ingress
 ```
 
 Find the `EXTERNAL-IP` of the ingress controller (e.g., `LoadBalancer` service). Use this IP for testing.
