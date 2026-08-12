@@ -192,6 +192,6 @@ You should see the default pages served by NGINX and HTTPD.
 
 After the lab, clean up the resources:  
 ```bash
-kubectl delete namespace ingress-lab
+kubectl delete ingress test
 ```
 
