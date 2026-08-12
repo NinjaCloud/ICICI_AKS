@@ -15,6 +15,10 @@
 ### **2.1 Create NGINX Pod and ClusterIP Service**
 
 **Pod YAML (nginx-pod.yaml):**
+```
+vi nginx-pod.yaml
+```
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -31,6 +35,10 @@ spec:
 ```
 
 **ClusterIP Service YAML (nginx-svc.yaml):**
+```
+vi nginx-svc.yaml
+```
+
 ```yaml
 apiVersion: v1
 kind: Service
@@ -55,6 +63,10 @@ kubectl apply -f nginx-svc.yaml
 ### **2.2 Create HTTPD Pod and ClusterIP Service**
 
 **Pod YAML (httpd-pod.yaml):**
+```
+vi httpd-pod.yaml
+```
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -71,6 +83,10 @@ spec:
 ```
 
 **ClusterIP Service YAML (httpd-svc.yaml):**
+```
+vi httpd-svc.yaml
+```
+
 ```yaml
 apiVersion: v1
 kind: Service
@@ -105,6 +121,11 @@ kubectl get svc
 ## **Step 3: Create Ingress Resource**
 
 **Ingress YAML (ingress.yaml):**
+
+```
+vi ingress.yaml
+```
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -112,9 +133,9 @@ metadata:
   name: test
   namespace: default
   annotations:
-    kubernetes.io/ingress.class: azure/application-gateway
     appgw.ingress.kubernetes.io/backend-path-prefix: /  
 spec:
+  ingressClassName:  azure-application-gateway
   rules:
     - http:
         paths:
